@@ -18,5 +18,34 @@
     <ClCompile Include="IntroductionToLinuxTools.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\memory1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\memory2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\cpu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\cpu-print.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\disk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\disk1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\part-a\introduction-to-linux-tools\Lab.pdf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\part-a\introduction-to-linux-tools\foo.pdf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\part-a\introduction-to-linux-tools\make-copies.sh">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
