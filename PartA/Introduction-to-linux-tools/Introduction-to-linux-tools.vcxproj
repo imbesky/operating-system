@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c0368a53-4713-4cf8-a5ce-c2bc77244785}</ProjectGuid>
-    <RootNamespace>IntroductionToLinuxTools</RootNamespace>
+    <ProjectGuid>{48caa01a-a200-4994-be45-c4756c0eccf8}</ProjectGuid>
+    <RootNamespace>Introductiontolinuxtools</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,18 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\cpu-print.c" />
-    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\cpu.c" />
-    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\disk.c" />
-    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\disk1.c" />
-    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\memory1.c" />
-    <ClCompile Include="..\..\..\part-a\introduction-to-linux-tools\memory2.c" />
-    <ClCompile Include="IntroductionToLinuxTools.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\part-a\introduction-to-linux-tools\foo.pdf" />
-    <None Include="..\..\..\part-a\introduction-to-linux-tools\Lab.pdf" />
-    <None Include="..\..\..\part-a\introduction-to-linux-tools\make-copies.sh" />
+    <ClCompile Include="Introduction-to-linux-tools.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
