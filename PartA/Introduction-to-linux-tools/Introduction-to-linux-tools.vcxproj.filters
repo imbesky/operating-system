@@ -18,5 +18,28 @@
     <ClCompile Include="Introduction-to-linux-tools.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\disk.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\disk1.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\cpu.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\cpu-print.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\memory1.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\memory2.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\serin\Downloads\intro-code\make-copies.sh">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

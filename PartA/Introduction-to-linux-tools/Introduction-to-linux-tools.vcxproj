@@ -127,7 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\cpu-print.c" />
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\cpu.c" />
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\disk.c" />
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\disk1.c" />
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\memory1.c" />
+    <ClCompile Include="C:\Users\serin\Downloads\intro-code\memory2.c" />
     <ClCompile Include="Introduction-to-linux-tools.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\serin\Downloads\intro-code\make-copies.sh" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
