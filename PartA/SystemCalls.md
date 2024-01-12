@@ -2,14 +2,47 @@
 
 unix에서 이용되는 API들
 
+## API
+
+API = Application Programming Interface
+- functions available to write user programs
+
+### System call
+
+= APIs provided by OS
+
+- system call: function call into OS code that runs at a higher privilege level of CPU, kind of interrupt
+- by system call, user mode is converted into kernel mode
+- sensitive operations are allowed only at a higher privilege level
+- some blocking system calls cause the process to be blocked and descheduled (ex: `read`)
+
+### OS and program
+
+#### POSIX API
+
+standard set of system calls that an OS must implement
+
+- programs writtne to the POSIX API can run on any POSIX compliant(부응하는) OS
+- most modern OS are POSIX compliant
+- ensures program portability; even accross different OS, program can run
+
+#### Library
+
+program language libraries hide the details of invoking(부르다) system calls
+
+- funtion(or method) in the language libraries calls the repond system call
+	- ex: `printf()` in C calls `write` system call
+
 ## `fork()` system call
 
 used to create a new process
 
+- all processes are created by forking from a parent
+- `init` process is ancestor of all processes
 - create child process from the parent process
 - copy the calling process child from parent
 	- `fork()` 시도한 그 위치부터 fork된 프로세스가 동작함; `main()`부터 시작하지 않음
-- 값 동일: PC, CPU register, open files
+- 값 동일(fork 순간): PC, CPU register, open files
 - 별개: address space, `fork()`의 반환값
 - without taking parameter, returns an integer value
 	- negative: creation was unsuccessful
@@ -69,6 +102,9 @@ When forking a parent process, there are now two processes running -> result is 
 make process wait
 
 - parent process delay its execution until the child finisheds executing when `wait()` is called
+	- when `exit()` is called in the child process, it exists as a zombie
+	- when parent calls `wati()`, zombie child is cleaned up or reaped
+	- if parent perminate before child, `init` process adopts orphans and reap them
 - when child is done, `wait()` returns to the parent
 - makes output deterministic: set the seqeunce explicitly
 - return the pid of child process 
@@ -108,7 +144,9 @@ int main()
 
 used when running a dfferent program from the calling program
 
-1. given name of an executable and arguments 
+- makes a process execute a given executable
+
+1. given name of an executable and arguments
 2. loads code and static data from that executable and overwrite its current code segment and current static data
 3. heap and stack and other parts of memory space of the program are re-initialized
 4. OS runs that program, passing in any arguments as the `argv` of that process
@@ -176,6 +214,8 @@ int main()
 
 `Shell`: user program
 
+- in basic OS, `init` process is created after initialization of hardware
+- `init` process spawns a shell like `bash`
 - in UNIX shell, it runs code after the call to `fork()`, before the call to `exec()`
 	- can alter the environment of the about-to-be-run program
 	- ex: input/output redirection, pipies, etc.
@@ -240,6 +280,12 @@ implemented in a similar way to the example above
 - output of one process is connected to an kernel pipe(queue), input of another process is connected to that same pipe
 - output of one process seamlessly is used as input to the next
 - chains of commands can be strung together
+
+### `exit()` system call
+
+terminates a process
+
+- called automatically when end of main is reached or process is a misbehaving one
 
 ## Process control and users
 
