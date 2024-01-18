@@ -27,16 +27,30 @@ metric: method to measure something
 algorithms for scheduling
 
 - = discipline
+- decide which process to run next on context switch
+- schedules CPU requests of processes
+	- CPU request = CPU burst: CPU time used by an process in a continuous stretch
+	- if a process comes back after I/O wait, it counts as a fresh CPU burst
+
+#### Goal
+
+1. maximize utilization
+	- utilization = fraction of time that CPU is used
+2. minimize turnaround time
+3. minimize response time
+4. maximize fairness
+5. minimze overhead
+	- run process long enough to amortize cost of context switch(~ 1 microsecond)
 
 ### FIFO
 
 = FCFS, First Come First Served
 
-- if running time of earlier process is formidably long, the total(and everage) turnaround time will rapidly increase
-
 #### Convoy effect
 
 number of relatively-short potential consumers of a resource get queued behind a heavyweight resource consumer
+
+- if running time of earlier process is formidably long, the total(and everage) turnaround time will rapidly increase
 
 ### SJF
 
@@ -44,7 +58,7 @@ number of relatively-short potential consumers of a resource get queued behind a
 
 - optimal for turnaround time; when all jobs arrive at the same time
 - bad for response time
-- when the process with long running time arrives earlier, the total(and everage) turnaround time will rapidly increase
+- when the process with long running time arrives earlier, the turnaround time will rapidly increase
 
 ### STCF
 
@@ -61,8 +75,8 @@ number of relatively-short potential consumers of a resource get queued behind a
 = Round Robin = time-slicing
 
 - runs a job for a time slice(= scheduling quantum) and switches to the next job in the run queue
-- optimal for response time
-- worst for turnaround time, fairness
+- good for response time, fairness
+- bad for turnaround time
 
 #### Time slice
 
@@ -185,6 +199,7 @@ solution for gaming the scheduler: accounting CPU time at each level of MLFQ
 edit rule 4
 
 4. once a job uses up its time allotment(regardless of how many times it relinquish CPU), its priority is reduced
+	- priority of process should decay with its age
 
 ### Tuning MLFQ
 
