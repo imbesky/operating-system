@@ -13,13 +13,16 @@ repository to save `Operating System` studying records based on [lecture](https:
 5. Scheculing policies
 6. Inter-process communication
 
-#### Practice
+#### Lab
 
 1. Introduction to Linux Tools
 2. Introduction to Debugging Tools
 3. Shell
 4. Inter-process communication
-5. Problems on proccesses
+
+#### Practice
+
+1. Problems on proccesses
 
 ### PART B: Memory
 
